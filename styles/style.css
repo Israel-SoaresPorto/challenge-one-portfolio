@@ -1,0 +1,225 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-texto: #f3e9e9;
+   --cor-hover: #2C29F0;
+   --segunda-cor: #54799B;
+   --terceira-cor: #5CF032;
+   --cor-de-link: #577050;
+   --cor-de-fundo: #F0A832;
+   --sexta-cor: #8206f5;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-de-texto);
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+}
+ol, ul,li {
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:  var(--cor-de-texto);
+}
+
+nav {
+    display: none;
+}
+
+.all {
+    max-width: 62.5em;
+}
+
+.toogle {
+    display: block;
+}
+
+.toogle-btn {
+    background-image: url(../assets/menu_close.png);
+}
+
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sessão Menu*/
+
+section.menu{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.menu__logo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.menu__toogle-nav {
+    display: block;
+    background-color: transparent;
+    background-image: url(../assets/menu_icon.png);
+    background-size: cover;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.menu__toogle-nav img {
+    width: 100%;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.menu__list__item {
+    text-align: center;
+}
+
+.menu__list__item a:hover {
+    transition: ease .5s;
+    color: var(--cor-hover);
+}
+
+
+
+/*Sessão Title*/
+
+section.title{
+
+}
+
+/*Sessão About*/
+
+section.about{
+
+}
+
+/*Sessão Hobbies*/
+
+section.hobbies{
+    
+}
+
+/* Experiência Acadêmica*/
+
+section.academic{
+
+}
+
+/* experiência*/
+
+section.experience{
+
+}
+
+/*Contato*/
+
+section.formcontato{
+
+}
+
+/*footeer*/
+
+section.footer{
+   
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+/*Tablet*/
+@media (min-width: 52em) {
+
+/* Menu */
+nav {
+    display: block;
+}
+
+section.menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__toogle-nav {
+    display: none;
+}
+
+
+.menu__list {
+    justify-content: space-between;
+}
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Experiências acadêmicas*/
+
+/*Expeirência profissional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 27em) {
+
+/*Menu*/
+.menu__list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+/*Titulo*/
+
+/*Sessão sobre*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formação Acadêmica*/
+
+/*Experiência Profissional*/
+
+ /*Contato*/
+
+/*Footer*/
+
+}
