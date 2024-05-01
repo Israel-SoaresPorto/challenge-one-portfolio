@@ -8,10 +8,21 @@ coloque nas sessões indicadas*/
    --cor-de-texto: #f3e9e9;
    --cor-hover: #2C29F0;
    --segunda-cor: #54799B;
+   --segunda-cor-hover: #8cb0d1;
    --terceira-cor: #5CF032;
    --cor-de-link: #577050;
    --cor-de-fundo: #F0A832;
    --sexta-cor: #8206f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,23 +41,11 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color:  var(--cor-de-texto);
-}
-
-nav {
-    display: none;
+    color: var(--cor-de-texto);
 }
 
 .all {
-    max-width: 62.5em;
-}
-
-.toogle {
-    display: block;
-}
-
-.toogle-btn {
-    background-image: url(../assets/menu_close.png);
+    max-width: 70em;
 }
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -65,9 +64,15 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sessão Menu*/
 
 section.menu{
-    padding: 2em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1em 10%;
+    background-color: var(--segunda-cor);
     display: flex;
     flex-direction: column;
+    gap: 2em
 }
 
 .menu__header {
@@ -99,6 +104,14 @@ section.menu{
     width: 100%;
 }
 
+.navbar {
+    display: none;
+}
+
+.toogle-menu {
+    display: block;
+}
+
 .menu__list {
     display: flex;
     flex-direction: column;
@@ -109,54 +122,56 @@ section.menu{
     text-align: center;
 }
 
-.menu__list__item a:hover {
+.menu__list__item a {
     transition: ease .5s;
-    color: var(--cor-hover);
 }
 
-
+.menu__list__item a:hover {
+    color: var(--cor-de-fundo);
+    transition: ease .5s;
+}
 
 /*Sessão Title*/
 
-section.title{
+section.title {
 
 }
 
 /*Sessão About*/
 
-section.about{
+/* section.about{
 
-}
+} */
 
 /*Sessão Hobbies*/
 
-section.hobbies{
+/* section.hobbies{
     
-}
+} */
 
 /* Experiência Acadêmica*/
 
-section.academic{
+/* section.academic{
 
-}
+} */
 
 /* experiência*/
 
-section.experience{
+/* section.experience{
 
-}
+} */
 
 /*Contato*/
 
-section.formcontato{
+/* section.formcontato{
 
-}
+} */
 
 /*footeer*/
 
-section.footer{
+/* section.footer{
    
-}
+} */
 
 /* Chegou a hora de se desafiar com a responsividade, 
 utilize como referência os breakpoints @media abaixo*/
@@ -165,7 +180,7 @@ utilize como referência os breakpoints @media abaixo*/
 @media (min-width: 52em) {
 
 /* Menu */
-nav {
+.navbar {
     display: block;
 }
 
@@ -179,8 +194,9 @@ section.menu {
     display: none;
 }
 
-
 .menu__list {
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -200,11 +216,6 @@ section.menu {
 @media (min-width: 27em) {
 
 /*Menu*/
-.menu__list {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em;
-}
 
 /*Titulo*/
 
