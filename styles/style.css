@@ -70,6 +70,7 @@ section.menu {
   top: 0;
   right: 0;
   width: 100%;
+  margin-bottom: 2em;
   padding: var(--small-padding) 2em;
   background-color: var(--segunda-cor-de-fundo);
   display: flex;
@@ -191,16 +192,15 @@ section.skills {
   background-color: var(--terceira-cor-de-fundo);
   padding: var(--small-padding);
   display: flex;
+  text-align: center;
   flex-direction: column;
-  align-items: center;
   gap: 1.5em;
 }
 
 .skills__line {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
   gap: 1em;
 }
 
@@ -208,16 +208,52 @@ section.skills {
   height: 10em;
   background-color: var(--cor-de-texto);
   color: #2A7AE4;
-  text-align: center;
+  flex-basis: 10em;
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex: 1 1 10em;
-  gap: 1em;
+  gap: 0.5em;
+}
+
+.skills__img img {
+  width: 3em;
+  height: 3em;
 }
 
 /*Sessão Hobbies*/
+section.hobbies {
+  background-color: var(--terceira-cor-de-fundo);
+  padding: var(--small-padding);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
 
+.hobbies__line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.hobbies__box {
+  height: 10em;
+  background-color: var(--cor-de-texto);
+  color: #2A7AE4;
+  flex-basis: 10em;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.hobbies__img img {
+  width: 3em;
+  height: 3em;
+}
 
 /* Experiência Acadêmica*/
 

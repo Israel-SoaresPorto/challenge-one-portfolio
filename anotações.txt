@@ -1,4 +1,0 @@
-Melhorias/Mudanças para fazer no projeto
-    - Adicionar tema light/dark
-    - Adicionar menu responsivo
-    - Alterar cores principais do projeto
