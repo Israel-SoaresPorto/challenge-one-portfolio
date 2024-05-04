@@ -5,16 +5,17 @@ coloque nas sessões indicadas*/
 :root {
   /*Insira a variavel das outras cores inspecionando o modelo do figma*/
   /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-  --cor-de-texto: #f3e9e9;
+  --cor-de-texto: #ffffff;
   --cor-hover: #2c29f0;
+  --cor-de-fundo: #f0a832;
   --segunda-cor-de-fundo: #54799b;
   --terceira-cor-de-fundo: #8cb0d1;
   --terceira-cor: #5cf032;
   --cor-de-link: #577050;
-  --cor-de-fundo: #f0a832;
   --small-padding: 1em;
   --medium-padding: 3em;
   --large-padding: 6em;
+  --largura-maxima: 75em;
 }
 
 * {
@@ -33,9 +34,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   color: var(--cor-de-texto);
-  padding: 0;
   line-height: 1;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 ol,
@@ -170,7 +171,7 @@ section.title {
 /*Sessão About*/
 
 section.about{
-  background-color: var(--terceira-cor-de-fundo);
+  background-color: var(--segunda-cor-de-fundo);
   padding: var(--small-padding);
 }
 
@@ -185,11 +186,38 @@ section.about{
   font-size: 1.5em;
 }
 
+/* Seção Skills */
+section.skills {
+  background-color: var(--terceira-cor-de-fundo);
+  padding: var(--small-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.skills__line {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+}
+
+.skills__box {
+  height: 10em;
+  background-color: var(--cor-de-texto);
+  color: #2A7AE4;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 10em;
+  gap: 1em;
+}
+
 /*Sessão Hobbies*/
 
-/* section.hobbies{
-    
-} */
 
 /* Experiência Acadêmica*/
 
@@ -245,8 +273,10 @@ utilize como referência os breakpoints @media abaixo*/
   /*title*/
   section.title {
     padding: 1em 6em;
+    display: flex;
+    justify-content: center;
   }
-
+  
   .title__container {
     font-size: 1.2em;
   }
