@@ -2,51 +2,53 @@
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-texto: #f3e9e9;
-   --cor-hover: #2C29F0;
-   --segunda-cor: #54799B;
-   --segunda-cor-hover: #8cb0d1;
-   --terceira-cor: #5CF032;
-   --cor-de-link: #577050;
-   --cor-de-fundo: #F0A832;
-   --sexta-cor: #8206f5;
+:root {
+  /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  --cor-de-texto: #f3e9e9;
+  --cor-hover: #2c29f0;
+  --segunda-cor: #54799b;
+  --segunda-cor-hover: #8cb0d1;
+  --terceira-cor: #5cf032;
+  --cor-de-link: #577050;
+  --cor-de-fundo: #f0a832;
+  --sexta-cor: #8206f5;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Poppins', sans-serif;
-    font-size: .8rem;
-    color: var(--cor-de-texto);
-    padding: 0;
-    line-height: 1;
-    display: flex;
-    justify-content: center;
+  box-sizing: border-box;
+  background-color: var(--cor-de-fundo);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: var(--cor-de-texto);
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
 }
-ol, ul,li {
-    list-style: none;
-    padding: 0;
+ol,
+ul,
+li {
+  list-style: none;
+  padding: 0;
 }
-a{
-    text-decoration: none;
-    color: var(--cor-de-texto);
+a {
+  text-decoration: none;
+  color: var(--cor-de-texto);
 }
 
 .all {
-    max-width: 70em;
+  padding: 1em;
 }
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -64,106 +66,106 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sessão Menu*/
 
-section.menu{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    padding: 1em 2em;
-    background-color: var(--segunda-cor);
-    display: flex;
-    flex-direction: column;
-    gap: 2em
+section.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: var(--segunda-cor);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .menu__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
 }
 
 .menu__logo {
-    display: flex;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 .menu__toogle-nav {
-    display: block;
-    background-color: transparent;
-    background-image: url(../assets/menu_icon.png);
-    background-size: cover;
-    width: 2em;
-    height: 2em;
-    padding: 0;
-    border: none;
-    outline: none;
+  display: block;
+  background-color: transparent;
+  background-image: url(../assets/menu_icon.png);
+  background-size: cover;
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  border: none;
+  outline: none;
 }
 
 .menu__toogle-nav img {
-    width: 100%;
+  width: 100%;
 }
 
 .navbar {
-    display: none;
+  display: none;
 }
 
 .toogle-menu {
-    display: block;
+  display: block;
 }
 
 .menu__list {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .menu__list__item {
-    text-align: center;
+  text-align: center;
 }
 
 .menu__list__item a {
-    transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 .menu__list__item a:hover {
-    color: var(--cor-de-fundo);
-    transition: ease .5s;
+  color: var(--cor-de-fundo);
+  transition: ease 0.5s;
 }
 
 /*Sessão Title*/
 
 section.title {
-    margin-top: 6em;
-    padding: 1em;
+  margin-top: 6em;
 }
 
 .title__div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }
 
 .title__profile {
-    width: 15em;
+  width: 15em;
+  border-radius: 50%;
 }
 
 .title__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  text-align: center;
 }
 
 .title__network {
-    display: flex;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 /*Sessão About*/
@@ -207,74 +209,82 @@ utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
 @media (min-width: 52em) {
+  .all {
+    padding: 10em;
+  }
 
-/* Menu */
-.navbar {
+  /* Menu */
+  .navbar {
     display: block;
-}
+  }
 
-section.menu {
+  section.menu {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
-.menu__toogle-nav {
+  .menu__toogle-nav {
     display: none;
-}
+  }
 
-.menu__list {
+  .menu__list {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
-/*title*/
+  /*title*/
 
-.title__profile {
+  .title__profile {
     width: 20em;
-}
+  }
 
-/*Skills*/
+  /*Skills*/
 
-/*Hobbies*/
+  /*Hobbies*/
 
-/*Experiências acadêmicas*/
+  /*Experiências acadêmicas*/
 
-/*Expeirência profissional*/
-
+  /*Expeirência profissional*/
 }
 
 /*Mobile*/
 @media (min-width: 27em) {
+  .all {
+    padding: 4em;
+  }
 
-/*Menu*/
+  /*Menu*/
 
-/*Titulo*/
-.title__div {
-    padding: 0 3em;
+  /*Titulo*/
+  section.title {
+    font-size: 1.3em;
+    margin-top: 2em;
+  }
+
+  .title__div {
     flex-direction: row-reverse;
     align-items: center;
     gap: 0.5em;
-}
+  }
 
-.title__container {
+  .title__container {
     text-align: left;
     align-items: start;
-}
+  }
 
-/*Sessão sobre*/
+  /*Sessão sobre*/
 
-/*Skills*/
+  /*Skills*/
 
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
+  /*Hobbies*/
 
-/*Experiência Profissional*/
+  /*Formação Acadêmica*/
 
- /*Contato*/
+  /*Experiência Profissional*/
 
-/*Footer*/
+  /*Contato*/
 
+  /*Footer*/
 }
