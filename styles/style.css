@@ -49,10 +49,6 @@ a {
   color: var(--cor-de-texto);
 }
 
-.all {
-  
-}
-
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
 de utiliza-la. 
 
@@ -175,6 +171,18 @@ section.title {
 
 section.about{
   background-color: var(--terceira-cor-de-fundo);
+  padding: var(--small-padding);
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.about__title {
+  font-size: 1.5em;
 }
 
 /*Sessão Hobbies*/
@@ -247,6 +255,15 @@ utilize como referência os breakpoints @media abaixo*/
     width: 20em;
   }
 
+  /* Sobre */
+  section.about{
+    padding: 3em var(--large-padding);
+  }
+  
+  .about__container {
+    font-size: 1.2em;
+  }
+
   /*Skills*/
 
   /*Hobbies*/
@@ -284,6 +301,10 @@ utilize como referência os breakpoints @media abaixo*/
   }
 
   /*Sessão sobre*/
+  section.about{
+    padding: 2em var(--medium-padding);
+    font-size: 1.2em;
+  }
 
   /*Skills*/
 
