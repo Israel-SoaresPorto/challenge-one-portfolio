@@ -7,12 +7,14 @@ coloque nas sessões indicadas*/
   /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
   --cor-de-texto: #f3e9e9;
   --cor-hover: #2c29f0;
-  --segunda-cor: #54799b;
-  --segunda-cor-hover: #8cb0d1;
+  --segunda-cor-de-fundo: #54799b;
+  --terceira-cor-de-fundo: #8cb0d1;
   --terceira-cor: #5cf032;
   --cor-de-link: #577050;
   --cor-de-fundo: #f0a832;
-  --sexta-cor: #8206f5;
+  --small-padding: 1em;
+  --medium-padding: 3em;
+  --large-padding: 6em;
 }
 
 * {
@@ -48,7 +50,7 @@ a {
 }
 
 .all {
-  padding: 1em;
+  
 }
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -71,8 +73,8 @@ section.menu {
   top: 0;
   right: 0;
   width: 100%;
-  padding: 1em 2em;
-  background-color: var(--segunda-cor);
+  padding: var(--small-padding) 2em;
+  background-color: var(--segunda-cor-de-fundo);
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -138,6 +140,7 @@ section.menu {
 
 section.title {
   margin-top: 6em;
+  padding: var(--small-padding);
 }
 
 .title__div {
@@ -170,9 +173,9 @@ section.title {
 
 /*Sessão About*/
 
-/* section.about{
-
-} */
+section.about{
+  background-color: var(--terceira-cor-de-fundo);
+}
 
 /*Sessão Hobbies*/
 
@@ -209,10 +212,6 @@ utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
 @media (min-width: 52em) {
-  .all {
-    padding: 10em;
-  }
-
   /* Menu */
   .navbar {
     display: block;
@@ -222,6 +221,7 @@ utilize como referência os breakpoints @media abaixo*/
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: var(--small-padding) var(--large-padding);
   }
 
   .menu__toogle-nav {
@@ -235,6 +235,13 @@ utilize como referência os breakpoints @media abaixo*/
   }
 
   /*title*/
+  section.title {
+    padding: 1em 6em;
+  }
+
+  .title__container {
+    font-size: 1.2em;
+  }
 
   .title__profile {
     width: 20em;
@@ -251,27 +258,29 @@ utilize como referência os breakpoints @media abaixo*/
 
 /*Mobile*/
 @media (min-width: 27em) {
-  .all {
-    padding: 4em;
-  }
-
   /*Menu*/
+  section.menu {
+    padding: 1em 3em;
+  }
 
   /*Titulo*/
   section.title {
     font-size: 1.3em;
-    margin-top: 2em;
+    margin-top: 4em;
+    padding: var(--small-padding) var(--medium-padding);
   }
 
   .title__div {
     flex-direction: row-reverse;
     align-items: center;
     gap: 0.5em;
+    font-size: 1em;
   }
 
   .title__container {
     text-align: left;
     align-items: start;
+    gap: 2em;
   }
 
   /*Sessão sobre*/
