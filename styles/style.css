@@ -1,17 +1,9 @@
-/*CSS Reset / Normalize*/
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root {
-  /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
   --cor-de-texto: #ffffff;
-  --cor-hover: #2c29f0;
+  --segunda-cor-de-texto: #2A7AE4;
   --cor-de-fundo: #f0a832;
   --segunda-cor-de-fundo: #54799b;
   --terceira-cor-de-fundo: #8cb0d1;
-  --terceira-cor: #5cf032;
-  --cor-de-link: #577050;
   --small-padding: 1em;
   --medium-padding: 3em;
   --large-padding: 6em;
@@ -49,19 +41,6 @@ a {
   text-decoration: none;
   color: var(--cor-de-texto);
 }
-
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
-
-Mas o que é o BEM?
-
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
 
 /*Sessão Menu*/
 
@@ -207,7 +186,7 @@ section.skills {
 .skills__box {
   height: 10em;
   background-color: var(--cor-de-texto);
-  color: #2A7AE4;
+  color: var(--segunda-cor-de-texto);
   flex-basis: 10em;
   flex-grow: 1;
   display: flex;
@@ -241,7 +220,7 @@ section.hobbies {
 .hobbies__box {
   height: 10em;
   background-color: var(--cor-de-texto);
-  color: #2A7AE4;
+  color: var(--segunda-cor-de-texto);
   flex-basis: 10em;
   flex-grow: 1;
   display: flex;
@@ -257,9 +236,47 @@ section.hobbies {
 
 /* Experiência Acadêmica*/
 
-/* section.academic{
+section.academic{
+  background-color: var(--segunda-cor-de-fundo);
+  padding: var(--medium-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
 
-} */
+.academic__title {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.academic__courses {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.academic__courses__box {
+  color: var(--cor-de-texto);
+  flex-grow: 1;
+  flex-basis: 20em;
+}
+
+.academic__courses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.academic__courses__item__img {
+  background-color: var(--cor-de-texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 20em;
+}
 
 /* experiência*/
 
@@ -330,11 +347,10 @@ utilize como referência os breakpoints @media abaixo*/
     font-size: 1.2em;
   }
 
-  /*Skills*/
-
-  /*Hobbies*/
-
   /*Experiências acadêmicas*/
+  section.academic {
+    padding: var(--large-padding);
+  }
 
   /*Expeirência profissional*/
 }
@@ -372,11 +388,10 @@ utilize como referência os breakpoints @media abaixo*/
     font-size: 1.2em;
   }
 
-  /*Skills*/
-
-  /*Hobbies*/
-
   /*Formação Acadêmica*/
+  .academic__courses {
+    flex-direction: row;
+  }
 
   /*Experiência Profissional*/
 
